@@ -1,19 +1,20 @@
 import 'package:flame/extensions/vector2.dart';
+import 'package:flame/game/game_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
 import 'package:flame/components/position_component.dart';
 import 'package:flame/components/mixins/tapable.dart';
 
 void main() {
-  final game = MyGame();
-
-  final widget = Container(
-    padding: const EdgeInsets.all(50),
-    color: const Color(0xFFA9A9A9),
-    child: game.widget,
+  runApp(
+    Container(
+      padding: const EdgeInsets.all(50),
+      color: const Color(0xFFA9A9A9),
+      child: GameWidget(
+        game: MyGame(),
+      ),
+    ),
   );
-
-  runApp(widget);
 }
 
 class TapableSquare extends PositionComponent with Tapable {

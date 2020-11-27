@@ -7,6 +7,7 @@ import 'package:flame/components/mixins/tapable.dart';
 import 'package:flame/game/base_game.dart';
 import 'package:flame/extensions/vector2.dart';
 import 'package:flame/game/game_render_box.dart';
+import 'package:flame/game/game_widget.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -100,7 +101,7 @@ void main() {
         Builder(
           builder: (BuildContext context) {
             renderBox = GameRenderBox(context, game);
-            return game.widget;
+            return GameWidget(game: game);
           },
         ),
       );

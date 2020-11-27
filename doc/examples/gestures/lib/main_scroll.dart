@@ -1,3 +1,4 @@
+import 'package:flame/game/game_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
@@ -7,7 +8,11 @@ import 'package:flame/extensions/offset.dart';
 
 void main() {
   final game = MyGame();
-  runApp(game.widget);
+  runApp(
+    GameWidget(
+      game: game,
+    ),
+  );
 }
 
 class MyGame extends Game with ScrollDetector {

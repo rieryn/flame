@@ -1,3 +1,4 @@
+import 'package:flame/game/game_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
 import 'package:flame/keyboard.dart';
@@ -5,7 +6,11 @@ import 'package:flutter/services.dart';
 
 import 'dart:ui';
 
-void main() => runApp(MyGame().widget);
+void main() => runApp(
+      GameWidget(
+        game: MyGame(),
+      ),
+    );
 
 class MyGame extends Game with KeyboardEvents {
   static final Paint _white = Paint()..color = const Color(0xFFFFFFFF);

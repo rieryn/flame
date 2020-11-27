@@ -3,6 +3,7 @@ import 'dart:ui';
 
 import 'package:flame/anchor.dart';
 import 'package:flame/extensions/vector2.dart';
+import 'package:flame/game/game_widget.dart';
 import 'package:flame/gestures.dart';
 import 'package:flame/components/position_component.dart';
 import 'package:flame/components/mixins/has_game_ref.dart';
@@ -11,9 +12,11 @@ import 'package:flame/palette.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  final game = MyGame();
-
-  runApp(game.widget);
+  runApp(
+    GameWidget(
+      game: MyGame(),
+    ),
+  );
 }
 
 class Palette {

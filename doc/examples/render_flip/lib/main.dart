@@ -1,3 +1,4 @@
+import 'package:flame/game/game_widget.dart';
 import 'package:flame/sprite_animation.dart';
 import 'package:flame/components/sprite_animation_component.dart';
 import 'package:flame/flame.dart';
@@ -9,7 +10,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   final Vector2 size = await Flame.util.initialDimensions();
   final game = MyGame(size);
-  runApp(game.widget);
+  runApp(
+    GameWidget(
+      game: game,
+    ),
+  );
 }
 
 class MyGame extends BaseGame {

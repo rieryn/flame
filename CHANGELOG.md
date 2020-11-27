@@ -7,6 +7,8 @@
  - Update Forge2D docs
  - Update PR template with removal of develop branch
  - Translate README to Russian
+ - Refactored how games are inserted into a flutter tree
+ - Refactored the widgets overlay API
 
 ## 1.0.0-rc2
  - Improve IsometricTileMap and Spritesheet classes

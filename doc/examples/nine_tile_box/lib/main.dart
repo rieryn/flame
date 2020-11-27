@@ -1,5 +1,6 @@
 import 'package:flame/game.dart';
 import 'package:flame/flame.dart';
+import 'package:flame/game/game_widget.dart';
 import 'package:flame/nine_tile_box.dart';
 import 'package:flame/sprite.dart';
 import 'package:flame/extensions/vector2.dart';
@@ -11,7 +12,11 @@ void main() async {
   final size = await Flame.util.initialDimensions();
 
   final game = MyGame(size);
-  runApp(game.widget);
+  runApp(
+    GameWidget(
+      game: game,
+    ),
+  );
 }
 
 class MyGame extends Game {

@@ -3,6 +3,7 @@ import 'package:flame/flame.dart';
 import 'package:flame/extensions/vector2.dart';
 import 'package:flame/components/sprite_component.dart';
 import 'package:flame/components/mixins/resizable.dart';
+import 'package:flame/game/game_widget.dart';
 import 'package:flame/text_config.dart';
 
 import 'package:flutter/material.dart' hide Image;
@@ -13,8 +14,11 @@ void main() async {
   Flame.initializeWidget();
   await Flame.util.initialDimensions();
 
-  final myGame = MyGame();
-  runApp(myGame.widget);
+  runApp(
+    GameWidget(
+      game: MyGame(),
+    ),
+  );
 }
 
 class AndroidComponent extends SpriteComponent with Resizable {

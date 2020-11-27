@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 import 'dart:ui';
 
+import 'package:flame/game/game_widget.dart';
 import 'package:flame/sprite_animation.dart';
 import 'package:flame/components/component.dart';
 import 'package:flame/particles/circle_particle.dart';
@@ -27,7 +28,14 @@ import 'package:flame/spritesheet.dart';
 import 'package:flame/text_config.dart';
 import 'package:flutter/material.dart' hide Animation, Image;
 
-void main() async => runApp((await loadGame()).widget);
+void main() async {
+  final game = await loadGame();
+  runApp(
+    GameWidget(
+      game: game,
+    ),
+  );
+}
 
 class MyGame extends BaseGame {
   /// Defines dimensions of the sample

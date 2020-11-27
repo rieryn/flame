@@ -2,6 +2,7 @@ import 'package:flame/components/sprite_component.dart';
 import 'package:flame/extensions/vector2.dart';
 import 'package:flame/game.dart';
 import 'package:flame/components/isometric_tile_map_component.dart';
+import 'package:flame/game/game_widget.dart';
 import 'package:flame/gestures.dart';
 import 'package:flame/sprite.dart';
 import 'package:flame/spritesheet.dart';
@@ -17,8 +18,11 @@ final topLeft = Vector2(x, y);
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final game = MyGame();
-  runApp(game.widget);
+  runApp(
+    GameWidget(
+      game: MyGame(),
+    ),
+  );
 }
 
 class Selector extends SpriteComponent {

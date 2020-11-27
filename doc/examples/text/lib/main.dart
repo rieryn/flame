@@ -5,6 +5,7 @@ import 'package:flame/components/text_box_component.dart';
 import 'package:flame/components/text_component.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
+import 'package:flame/game/game_widget.dart';
 import 'package:flame/palette.dart';
 import 'package:flame/text_config.dart';
 import 'package:flame/extensions/vector2.dart';
@@ -12,7 +13,11 @@ import 'package:flutter/material.dart';
 
 void main() async {
   final Vector2 size = await Flame.util.initialDimensions();
-  runApp(MyGame(size).widget);
+  runApp(
+    GameWidget(
+      game: MyGame(size),
+    ),
+  );
 }
 
 TextConfig regular = TextConfig(color: BasicPalette.white.color);

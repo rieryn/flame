@@ -12,26 +12,20 @@ class ExampleGame extends Game with HasWidgetsOverlay, TapDetector {
 
   @override
   void render(Canvas canvas) {
-    canvas.drawRect(const Rect.fromLTWH(100, 100, 100, 100),
-        Paint()..color = BasicPalette.white.color);
+    canvas.drawRect(
+      const Rect.fromLTWH(100, 100, 100, 100),
+      Paint()..color = BasicPalette.white.color,
+    );
   }
 
   @override
   void onTap() {
     if (isPaused) {
-      removeWidgetOverlay('PauseMenu');
+      overlays.remove('PauseMenu');
       isPaused = false;
     } else {
-      addWidgetOverlay(
+      overlays.add(
         'PauseMenu',
-        Center(
-          child: Container(
-            width: 100,
-            height: 100,
-            color: const Color(0xFFFF0000),
-            child: const Center(child: const Text('Paused')),
-          ),
-        ),
       );
       isPaused = true;
     }

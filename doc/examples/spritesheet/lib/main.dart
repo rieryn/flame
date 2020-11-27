@@ -2,13 +2,18 @@ import 'package:flame/components/sprite_animation_component.dart';
 import 'package:flame/components/sprite_component.dart';
 import 'package:flame/extensions/vector2.dart';
 import 'package:flame/game.dart';
+import 'package:flame/game/game_widget.dart';
 import 'package:flame/spritesheet.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  runApp(MyGame().widget);
+  runApp(
+    GameWidget(
+      game: MyGame(),
+    ),
+  );
 }
 
 class MyGame extends BaseGame {

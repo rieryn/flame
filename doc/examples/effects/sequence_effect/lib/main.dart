@@ -3,6 +3,7 @@ import 'package:flame/effects/move_effect.dart';
 import 'package:flame/effects/scale_effect.dart';
 import 'package:flame/effects/rotate_effect.dart';
 import 'package:flame/effects/sequence_effect.dart';
+import 'package:flame/game/game_widget.dart';
 import 'package:flame/gestures.dart';
 import 'package:flame/extensions/offset.dart';
 import 'package:flame/extensions/vector2.dart';
@@ -15,7 +16,11 @@ import './square.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Flame.util.fullScreen();
-  runApp(MyGame().widget);
+  runApp(
+    GameWidget(
+      game: MyGame(),
+    ),
+  );
 }
 
 class MyGame extends BaseGame with TapDetector {

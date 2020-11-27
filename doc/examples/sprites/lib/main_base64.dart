@@ -1,3 +1,4 @@
+import 'package:flame/game/game_widget.dart';
 import 'package:flutter/material.dart';
 
 import 'package:flame/sprite.dart';
@@ -6,7 +7,11 @@ import 'package:flame/game.dart';
 import 'dart:ui';
 
 void main() {
-  runApp(MyGame().widget);
+  runApp(
+    GameWidget(
+      game: MyGame(),
+    ),
+  );
 }
 
 class MyGame extends Game {

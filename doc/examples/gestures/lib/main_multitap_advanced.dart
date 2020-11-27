@@ -1,11 +1,15 @@
+import 'package:flame/game/game_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flame/game.dart';
 import 'package:flame/gestures.dart';
 import 'package:flame/palette.dart';
 
 void main() {
-  final game = MyGame();
-  runApp(game.widget);
+  runApp(
+    GameWidget(
+      game: MyGame(),
+    ),
+  );
 }
 
 /// Includes an example mixing two advanced detectors
