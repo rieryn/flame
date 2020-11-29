@@ -8,6 +8,7 @@
  - Update PR template with removal of develop branch
  - Translate README to Russian
  - Split up Component and PositionComponent to BaseComponent
+ - Dragable mixin for components
 
 ## 1.0.0-rc2
  - Improve IsometricTileMap and Spritesheet classes
