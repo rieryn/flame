@@ -94,7 +94,7 @@ Widget _applyAdvancedGesturesDetectors(Game game, Widget child) {
         instance
           ..onStart = (Offset o) {
             final drag = DragEvent();
-            // TODO: Remove any padding/margin on the widget here
+            // Note that padding or margin isn't taken into account here
             drag.initialPosition = o;
             _dragHandlers.forEach((h) => h.onReceiveDrag(drag));
             return drag;
