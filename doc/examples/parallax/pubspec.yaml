@@ -9,8 +9,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flame:
-    path: ../../../
+  flame: ^1.0.0-rc1
+  provider:
+  liquid_progress_indicator: ^0.3.2
 
 dev_dependencies:
   flutter_test:
@@ -18,8 +19,4 @@ dev_dependencies:
 
 flutter:
   assets:
-    - assets/images/bg.png
-    - assets/images/mountain-far.png
-    - assets/images/mountains.png
-    - assets/images/trees.png
-    - assets/images/foreground-trees.png
+    - assets/images/
